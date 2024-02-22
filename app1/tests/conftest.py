@@ -43,3 +43,11 @@ def new_user(db, create_user_factory):
 @pytest.fixture
 def new_staff_user(db, create_user_factory):
     return create_user_factory("Test_User", "password", "MyName", is_staff=True)
+
+
+# using the factoryboy UserFactory
+
+@pytest.fixture
+def create_new_user_fb(db, user_factory):
+    user = user_factory.create()
+    return user

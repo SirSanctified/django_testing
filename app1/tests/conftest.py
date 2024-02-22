@@ -1,5 +1,10 @@
 import pytest
 from django.contrib.auth.models import User
+from pytest_factoryboy import register
+from .factories import UserFactory
+
+
+register(UserFactory)
 
 @pytest.fixture
 def user_1(db):

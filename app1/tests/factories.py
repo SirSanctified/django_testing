@@ -28,3 +28,5 @@ class ProductFactory(factory.django.DjangoModelFactory):
     name = "product_title"
     description = fake.text()
     category = factory.SubFactory(CategoryFactory)
+    regular_price = 100
+    discount_price = 50
